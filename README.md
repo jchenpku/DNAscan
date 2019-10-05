@@ -466,7 +466,7 @@ mkdir /path/to/wherever/fungi_db
 
 cd /path/to/wherever/fungi_db
 
-wget ftp://ftp.ncbi.nlm.nih.gov/refseq/release/bacteria/fungi.*.1.genomic.fna.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/refseq/release/fungi/fungi.*.1.genomic.fna.gz
 
 for i in $(ls | grep -e genomic.fna.gz -e fungi); do gzip -d $i ; done 
 

@@ -917,7 +917,7 @@ if alignment:
                     rg_option = ""
 
                 os.system(
-                    "%shisat2 %s --no-softclip --no-spliced-alignment -p %s -x %s -U %s | %s %ssamtools view -Sb -  | %ssambamba sort -t %s --tmpdir=%stmp -o %ssorted.bam /dev/stdin; %ssamtools index -@ %s %ssorted.bam"
+                    "%shisat2 %s %s --no-softclip --no-spliced-alignment -p %s -x %s -U %s | %s %ssamtools view -Sb -  | %ssambamba sort -t %s --tmpdir=%stmp -o %ssorted.bam /dev/stdin; %ssamtools index -@ %s %ssorted.bam"
                     % (path_hisat, hisat_custom_options, rg_option_hisat2, num_cpu, path_hisat_index,
                        input_file, samblaster_cmq, path_samtools,
                        path_sambamba, num_cpu, out, out, path_samtools, num_cpu,

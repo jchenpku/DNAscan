@@ -1202,7 +1202,7 @@ if variantcalling:
 if filter_string:
 
     os.system(
-        "%sbcftools filter -i \'%s\' %s | bgzip -c > %s%s_sorted_filtered.vcf.gz ; %tabix -fp vcf %s%s_sorted_filtered.vcf.gz; mv %s%s_sorted_filtered.vcf.gz %sresults " (
+        "%sbcftools filter -i \'%s\' %s | bgzip -c > %s%s_sorted_filtered.vcf.gz ; %stabix -fp vcf %s%s_sorted_filtered.vcf.gz; mv %s%s_sorted_filtered.vcf.gz %sresults " % (
             path_bcftools, filter_string, variant_results_file, out,
             sample_name, path_tabix, sample_name, out, out, sample_name, out))
 
